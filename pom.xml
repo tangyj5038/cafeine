@@ -16,6 +16,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<caffeine.cache.version>2.7.0</caffeine.cache.version>
 	</properties>
 
 	<dependencies>
@@ -51,6 +52,27 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
+		<!-- Spring boot Cache-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+			<version>1.5.12.RELEASE</version>
+		</dependency>
+		<!--for caffeine cache-->
+<!--		<dependency>
+			<groupId>com.github.ben-manes.caffeine</groupId>
+			<artifactId>caffeine</artifactId>
+			<version>${caffeine.cache.version}</version>
+		</dependency>-->
+
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>21.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
