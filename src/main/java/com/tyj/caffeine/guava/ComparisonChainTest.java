@@ -34,14 +34,9 @@ class People implements  Comparable<People>{
     private String name;
     private int age;
 
-
-
-
-
     @Override
     public int compareTo(People o) {
-
-
+        //链式比较
         return ComparisonChain.start()
                 .compare(this.age,o.age)
                 .result();

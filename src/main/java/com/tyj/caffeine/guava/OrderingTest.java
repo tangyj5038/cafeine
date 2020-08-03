@@ -13,7 +13,6 @@ import java.util.List;
 //Ordering
 public class OrderingTest {
 
-
     public static void main(String[] args) {
 
         List<Student> list = new ArrayList<Student>();
@@ -25,7 +24,7 @@ public class OrderingTest {
 
         list.stream().forEach(student -> System.out.println(student));
 
-
+        //Ordering
         Ordering<Student> scoreOrdering = Ordering.natural().reverse().onResultOf(Student::getScore);
         Ordering<Student> ageOrdering = Ordering.natural().onResultOf(Student::getAge);
         Ordering<Student> nameOrdering = Ordering.natural().onResultOf(Student::getName);
@@ -35,13 +34,7 @@ public class OrderingTest {
 
         System.out.println("-------------------------");
         list.stream().forEach(student -> System.out.println(student));
-
-
     }
-
-
-
-
 }
 
 @Data
